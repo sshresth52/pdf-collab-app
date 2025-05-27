@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# 📄 PDF Collaboration App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A secure, user-friendly web app for uploading, viewing, and sharing PDF files — with real-time commenting, authentication, and password reset support.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔐 **User Authentication**
+  - Secure sign-up & login via Supabase Auth
+  - Password reset via email link
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📤 **PDF Upload**
+  - Only PDF files allowed
+  - Drag-and-drop & file picker supported
+  - Uploaded files stored in Supabase Storage
+  - Prevents re-upload of duplicate filenames
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 📁 **File Management**
+  - View all uploaded PDFs
+  - Search PDFs by name
+  - Delete files uploaded by the logged-in user
+  - Public viewable link sharing
 
-### `npm test`
+- 💬 **Commenting System**
+  - Comments stored in Supabase table `comments`
+  - Anyone can leave a comment with their name
+  - Real-time feedback on new comments
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🧑‍💼 **Access-Based Navigation**
+  - Only show upload/view links when logged in
+  - Logout functionality available
+  - Intuitive access control flow
 
-### `npm run build`
+- 🎨 **Responsive UI**
+  - Tailwind CSS for styling
+  - Clean layout for all screens
+  - Error/success messages for key actions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend**: React (Create React App), JSX
+- **Styling**: Tailwind CSS
+- **Backend/Auth/DB**: Supabase
+- **Storage**: Supabase Storage buckets
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+pdf-collab-app/
+├── public/
+├── src/
+│   ├── pages/
+│   │   ├── FileList.jsx
+│   │   ├── Login.jsx
+│   │   ├── Signup.jsx
+│   │   ├── ForgotPassword.jsx
+│   │   ├── ResetPassword.jsx
+│   │   └── SharedView.jsx
+│   ├── supabaseClient.js
+│   └── App.js
+├── README.md
+└── package.json
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🌐 Deployment Ready
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- GitHub repo: [https://github.com/sshresth52/pdf-collab-app](https://github.com/sshresth52/pdf-collab-app)
+- Replace `localhost` with deployed URL for production
+- Easy to host on **Vercel**, **Netlify**, **Render**, or **Supabase Edge Functions**
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🙋‍♂️ Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Sudhanshu Shresth**  
+[GitHub Profile](https://github.com/sshresth52
+)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

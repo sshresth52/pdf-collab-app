@@ -33,7 +33,6 @@ A secure, user-friendly web app for uploading, viewing, and sharing PDF files �
   - Intuitive access control flow
 
 - 🎨 **Responsive UI**
-  - Tailwind CSS for styling
   - Clean layout for all screens
   - Error/success messages for key actions
 
@@ -42,7 +41,6 @@ A secure, user-friendly web app for uploading, viewing, and sharing PDF files �
 ## 🛠️ Tech Stack
 
 - **Frontend**: React (Create React App), JSX
-- **Styling**: Tailwind CSS
 - **Backend/Auth/DB**: Supabase
 - **Storage**: Supabase Storage buckets
 
@@ -71,15 +69,14 @@ pdf-collab-app/
 
 - GitHub repo: [https://github.com/sshresth52/pdf-collab-app](https://github.com/sshresth52/pdf-collab-app)
 - Replace `localhost` with deployed URL for production
-- Easy to host on **Vercel**, **Netlify**, **Render**, or **Supabase Edge Functions**
+- Easy to host on **Vercel** or **Netlify**
 
 ---
 
 ## 🙋‍♂️ Author
 
 **Sudhanshu Shresth**  
-[GitHub Profile](https://github.com/sshresth52
-)
+[GitHub Profile](https://github.com/sshresth52)
 
 ---
 

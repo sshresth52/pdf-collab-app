@@ -18,7 +18,7 @@ export default function App() {
   // 🔁 Check user session on mount
   useEffect(() => {
     const getUser = async () => {
-      const { data, error } = await supabase.auth.getUser();
+      const { data } = await supabase.auth.getUser();
       if (data?.user) setUser(data.user);
     };
     getUser();

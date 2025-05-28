@@ -15,7 +15,7 @@ export default function App() {
   const [uploadStatus, setUploadStatus] = useState("");
   const [user, setUser] = useState(null);
 
-  // 🔁 Check user session on mount
+  // 🔁 Auth state check
   useEffect(() => {
     const getUser = async () => {
       const { data } = await supabase.auth.getUser();
@@ -85,18 +85,31 @@ export default function App() {
 
   return (
     <Router>
+      {/* ✅ Navigation Bar */}
       <nav
         style={{
-          marginBottom: "20px",
+          marginBottom: "30px",
           display: "flex",
+          justifyContent: "center",
           alignItems: "center",
-          gap: "10px",
+          gap: "30px",
+          backgroundColor: "#f0f0f0",
+          padding: "15px 0",
+          fontSize: "18px",
+          boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
         }}
       >
         {user ? (
           <>
-            <Link to="/">📤 Upload</Link>
-            <Link to="/files">📂 View Files</Link>
+            <Link to="/" style={{ textDecoration: "none", color: "#007bff" }}>
+              📤 Upload
+            </Link>
+            <Link
+              to="/files"
+              style={{ textDecoration: "none", color: "#007bff" }}
+            >
+              📂 View Files
+            </Link>
             <button
               onClick={async () => {
                 const { error } = await supabase.auth.signOut();
@@ -108,9 +121,10 @@ export default function App() {
                 }
               }}
               style={{
-                background: "transparent",
+                background: "none",
                 border: "none",
-                color: "red",
+                color: "#d9534f",
+                fontWeight: "bold",
                 cursor: "pointer",
                 textDecoration: "underline",
               }}
@@ -120,12 +134,23 @@ export default function App() {
           </>
         ) : (
           <>
-            <Link to="/signup">🆕 Signup</Link>
-            <Link to="/login">🔐 Login</Link>
+            <Link
+              to="/signup"
+              style={{ textDecoration: "none", color: "#007bff" }}
+            >
+              🆕 Signup
+            </Link>
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "#007bff" }}
+            >
+              🔐 Login
+            </Link>
           </>
         )}
       </nav>
 
+      {/* ✅ Routes */}
       <Routes>
         <Route
           path="/"
@@ -161,8 +186,12 @@ export default function App() {
                 </p>
               </div>
             ) : (
-              <div style={{ paddingTop: "30px", textAlign: "center" }}>
-                <h3>Please log in to upload PDFs</h3>
+              <div style={{ paddingTop: "60px", textAlign: "center" }}>
+                <h2>📄 Welcome to PDF Collab</h2>
+                <p style={{ marginTop: "10px", fontSize: "18px" }}>
+                  Please sign up or log in to upload and collaborate on PDF
+                  files.
+                </p>
               </div>
             )
           }
